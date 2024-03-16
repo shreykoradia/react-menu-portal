@@ -90,8 +90,8 @@ createPortal(
       )
 ```
 
-Future Enhancement :
+## Future Enhancement :
 
-Currently We are developing and testing more and more to cancel out and optimise the above steps,
+Currently We are developing and testing more and more to cancel out and optimise the above steps, We would love to see you help and support on this library to make a go-to library for custom styled dropdown library with the soul motive of faster development and versatility across code-base
 
 If you're interested in contributing to or collaborating on React Menu Portal, we'd love to hear from you! Feel free to reach out to us via email at [Shrey's Email](device.shreykoradia@gmail.com) or on Twitter [@shreykoradia](https://twitter.com/shreykoradia). Let's work together to make React Menu Portal the go-to solution for integrating custom dropdown menus in React applications!
