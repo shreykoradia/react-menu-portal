@@ -4,6 +4,7 @@
   "version": "0.0.2",
   "type": "module",
   "license": "MIT",
+  "Repository": "https://github.com/shreykoradia/react-menu-portal",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
