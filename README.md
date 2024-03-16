@@ -1,30 +1,97 @@
-# React + TypeScript + Vite
+# react-menu-portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Menu Portal is a lightweight React component that simplifies the integration of custom dropdown menus into your applications. Whether you're building a table, form, or any other UI component, React Menu Portal allows you to easily open dropdown menus in a portal, ensuring proper rendering and positioning regardless of the parent container.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Seamlessly integrate custom dropdown menus into any React application.
+- Render dropdown menus in a portal to avoid styling and positioning issues.
+- Easily open dropdown menus on user interaction, such as clicking or hovering.
 
-## Expanding the ESLint configuration
+## Why We Built It
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Integrating dropdown menus into complex UI components like tables or forms can be challenging, especially when dealing with z-index stacking contexts and overflow issues. React Menu Portal simplifies this process by handling the rendering of dropdown menus in a portal, ensuring they appear above other elements and are positioned correctly within the viewport.
 
-- Configure the top-level `parserOptions` property like this:
+## Key Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## Get Started
+
+To get started with React Menu Portal, install the package via npm:
+
+```bash
+npm install react-menu-portal
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## How to use react-menu-portal component
+
+Import PortalWrapper where you want to open the dropdown let's say in a form you built a custom dropdown with react-select named `CommonDropdown`.
+
+```
+import {PortalWrapper} from "react-menu-portal"
+
+// rest of the code
+
+<PortalWrapper ref={dropdownRef}>
+          {(position) => (
+            <CommonDropdown
+              {...props}
+              menuListPosition={position}
+            />
+          )}
+</PortalWrapper>
+
+```
+
+now let's see how do you configure your custom dropdown that is built in react-select for example, we will just use createPortal from `react-dom`
+
+```
+import createPortal from 'react-dom'
+
+const MenuList = wrapMenuList((props) =>
+    menuListPosition ? (
+      createPortal(
+        <div
+          style={{ position: "absolute", top: menuListPosition.top, left: menuListPosition.left }}
+        >
+          <CustomMenuComponent
+            props={props}
+            title={createTitle}
+            isVisible={!isEmpty(createDetails)}
+            handleCreate={() => setIsModalOpen(true)}
+          />
+        </div>,
+        document.body
+      )
+    ) : (
+      <CustomMenuComponent
+        props={props}
+        title={createTitle}
+        isVisible={!isEmpty(createDetails)}
+        handleCreate={() => setIsModalOpen(true)}
+      />
+    )
+  );
+
+```
+
+So we just need to add our menuList Component and load it inside the create-portal component.
+
+```
+createPortal(
+        <div
+          style={{ position: "absolute", top: menuListPosition.top, left: menuListPosition.left }}
+        >
+         <!-- Any Menu Component of the dropdown (React-Select , React-Async-Paginate and many more) above we configured MenuList Component of React-Select -->
+        </div>,
+        document.body
+      )
+```
+
+Future Enhancement :
+
+Currently We are developing and testing more and more to cancel out and optimise the above steps,
+
+If you're interested in contributing to or collaborating on React Menu Portal, we'd love to hear from you! Feel free to reach out to us via email at [Shrey's Email](device.shreykoradia@gmail.com) or on Twitter [@shreykoradia](https://twitter.com/shreykoradia). Let's work together to make React Menu Portal the go-to solution for integrating custom dropdown menus in React applications!
