@@ -1,7 +1,7 @@
 {
   "name": "react-menu-portal",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -24,5 +24,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
-  }
+  },
+  "keywords": ["react", "typescript", "dropdown", "beat"]
 }
