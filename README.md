@@ -1,6 +1,6 @@
 # react-menu-portal
 
-React Menu Portal is a lightweight React component that simplifies the integration of custom dropdown menus into your applications. Whether you're building a table, form, or any other UI component, React Menu Portal allows you to easily open dropdown menus in a portal, ensuring proper rendering and positioning regardless of the parent container.
+React Menu Portal is a lightweight React component that simplifies the integration of custom dropdown menus into your applications. Whether you're building a table, form, or any other UI component, React Menu Portal allows you to easily open dropdown menus in a portal, ensuring proper rendering and positioning regardless of the parent container. Best use-cases could be when Custom Dropdown are used inside of React-Select , React-Select rendered inside of React-table ....
 
 ## Features
 
