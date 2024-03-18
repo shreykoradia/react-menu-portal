@@ -5,6 +5,7 @@
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/shreykoradia/react-menu-portal",
+  "main":"src/main.tsx",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -27,5 +28,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
   },
-  "keywords": ["react", "typescript", "dropdown", "beat"]
+  "keywords": ["react", "typescript", "dropdown", "beta"]
 }
