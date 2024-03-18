@@ -26,7 +26,7 @@ const PortalWrapper = React.forwardRef<
   };
 
   return (
-    <div ref={ref} className="w-full" onClick={handleDropdownClick}>
+    <div ref={ref} onClick={handleDropdownClick}>
       {children(position)}
     </div>
   );
