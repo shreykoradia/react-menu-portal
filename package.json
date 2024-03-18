@@ -1,7 +1,7 @@
 {
   "name": "react-menu-portal",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/shreykoradia/react-menu-portal",
@@ -28,5 +28,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
   },
-  "keywords": ["react", "typescript", "dropdown", "beta"]
+  "keywords": ["react", "typescript", "menu-list", "beta"]
 }
