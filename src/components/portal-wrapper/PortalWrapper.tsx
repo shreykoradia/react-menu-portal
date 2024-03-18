@@ -1,5 +1,9 @@
 import React from "react";
-import { positionProps } from "react-menu-portal";
+
+type positionProps = {
+  top: number;
+  left: number;
+};
 
 const PortalWrapper = React.forwardRef<
   HTMLDivElement,

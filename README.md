@@ -4,7 +4,7 @@ React Menu Portal is a lightweight React component that simplifies the integrati
 
 ## Features
 
-- Seamlessly integrate custom dropdown menus into any React application.
+- Seamlessly integrate custom dropdown menus (wrapper of React-Select / react-async paginate) into any React application.
 - Render dropdown menus in a portal to avoid styling and positioning issues.
 - Easily open dropdown menus on user interaction, such as clicking or hovering.
 
@@ -27,7 +27,7 @@ npm install react-menu-portal
 
 ## How to use react-menu-portal component
 
-Import PortalWrapper where you want to open the dropdown let's say in a form you built a custom dropdown with react-select named `CommonDropdown`.
+Import PortalWrapper where you want to open the dropdown-menuList let's say in a form you built a custom dropdown with react-select named `CommonDropdown` inside a table / react-table.
 
 ```
 import {PortalWrapper} from "react-menu-portal"
